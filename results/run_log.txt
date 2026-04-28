@@ -1,0 +1,91 @@
+Dynamic Factor Model EM Estimation - Experiment Runner
+======================================================================
+
+======================================================================
+EXPERIMENT 1: Monte Carlo Validation of Dynamic-Factor EM Estimation
+======================================================================
+Mode: PILOT (10 replications)
+============================================================
+Running Monte Carlo Experiment (exp_1)
+============================================================
+
+--- Substudy A: Factor-Space Recovery ---
+Substudy A: 2 parameter cells × 10 replications
+  Cell 0/2...
+
+--- Substudy B: Ragged-Edge Forecast Accuracy ---
+Substudy B: 2 parameter cells × 10 replications
+  Cell 0/2...
+
+--- Substudy C: AR(1) Idiosyncratic Estimation ---
+Substudy C: 3 parameter cells × 10 replications
+  T=50, missing=0%...
+  T=100, missing=0%...
+  T=200, missing=0%...
+
+Exp 1 completed in 58.4s
+  Saved: results/substudy_a_factor_recovery.png
+  Saved: results/substudy_a_heatmap.png
+  Saved: results/substudy_b_forecast_accuracy.png
+  Saved: results/substudy_c_ar1_estimation.png
+
+======================================================================
+EXPERIMENT 2: Empirical Euro Area GDP Nowcasting
+======================================================================
+============================================================
+Running Empirical Nowcasting Experiment (exp_2)
+============================================================
+
+  Panel: small, AR1-idio: False
+    Avg RMSFE: 0.8736
+
+  Panel: small, AR1-idio: True
+    Avg RMSFE: 0.7750
+
+  Panel: medium, AR1-idio: False
+    Avg RMSFE: 0.8281
+
+  Panel: medium, AR1-idio: True
+    Avg RMSFE: 0.8143
+
+Exp 2 completed in 238.1s
+  Saved: results/nowcasting_results.png
+
+======================================================================
+EXPERIMENT 3: Model-Based News Decomposition
+======================================================================
+============================================================
+Running News Decomposition Experiment (exp_3)
+============================================================
+
+  small_uncorr...
+  News decomposition: panel=small, ar1_idio=False
+
+  small_ar1...
+  News decomposition: panel=small, ar1_idio=True
+
+Exp 3 completed in 26.2s
+  Saved: results/news_decomposition.png
+
+======================================================================
+EXPERIMENT 4: Backdating Euro Area GDP
+======================================================================
+============================================================
+Running Backdating Experiment (exp_4)
+============================================================
+
+  Panel: small...
+    Converged: True, Iterations: 6
+
+  Panel: medium...
+    Converged: True, Iterations: 4
+
+Exp 4 completed in 21.7s
+  Saved: results/backdating_results.png
+
+Results saved to results/RESULTS.md
+
+======================================================================
+All experiments completed in 347.0s
+Results saved to: /workspace/project/results
+======================================================================
